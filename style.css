@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #f6ffcf;
+  margin: 0px;
+  color: #333333;
+}
+
+header {
+  background-color: #3eb488;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+input {
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+}
+
+select {
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.over {
+  color: #ff4040;
+  font-weight: bolder;
+}
+
+.under {
+  color: #3eb488;
+}
+
+/* color pallette hex codes
+    color: #ff4040;
+    color: #ff7f51;
+    color: #f6ffcf;
+    color: #aaf0d2;
+    color: #70dab4;
+    color: #3eb488;
+} */

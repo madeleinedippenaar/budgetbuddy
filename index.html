@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script
+      src="https://kit.fontawesome.com/325a882eaa.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Budget Buddy App</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>Budget Bud</header>
 
+    <div class="left">
+      <div class="budget-total">
+        <div class="budget">
+          Starting Budget $<span id="startingBudget">0.00</span>
+        </div>
+        <div class="budget">
+          Remaining Budget $<span id="remainingBudget">0.00</span>
+        </div>
+      </div>
 
-<script src="script.js"></script>
-</body>
+      <div class="total-expenses">
+        <div id="totalexp">
+          Total Expenses <span id="totalcash">$0.00</span>
+        </div>
+        <div class="total-by-category">
+          <div id="entexp">
+            <i class="fas fa-gamepad"></i><span id="entcash">$0.00</span>
+          </div>
+          <div id="foodexp">
+            <i class="fas fa-pizza-slice"></i><span id="foodcash">$0.00</span>
+          </div>
+          <div id="clothexp">
+            <i class="fas fa-tshirt"></i><span id="clothcash">$0.00</span>
+          </div>
+          <div id="billexp">
+            <i class="fas fa-envelope"></i><span id="billcash">$0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-expense">
+        <form action="" name="expenseForm" id="expenseForm">
+          <input
+            type="text"
+            id="expenseDescription"
+            class="expense-description"
+            placeholder="Expense Description"
+            name="expenseDescription"
+          />
+          <select
+            name="expense-type"
+            id="expenseType"
+            class="expense-type"
+            name="expenseType"
+          >
+            <option value="entertainment">Entertainment</option>
+            <option value="food">Food</option>
+            <option value="clothing">Clothing</option>
+            <option value="bills">Bills</option>
+          </select>
+          <input
+            type="text"
+            id="expenseAmount"
+            class="expense-amount"
+            placeholder="Amount"
+            name="expenseAmount"
+          />
+          <button id="expense-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="expense-table" id="expenseContainer"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
