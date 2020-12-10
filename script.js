@@ -7,8 +7,8 @@ let remainingBudget = document.getElementById("remainingBudget");
 
 const expenseForm = document.getElementById("expenseForm");
 
-function budgetSubtract(remainingBudget, price) {
-  let updatedTotal = remainingBudget - price;
+function budgetSubtract(remainingBudget, expenseAmount) {
+  let updatedTotal = remainingBudget - expenseAmount;
   document.getElementById("remainingBudget").innerHTML = updatedTotal;
 }
 

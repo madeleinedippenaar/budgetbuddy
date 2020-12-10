@@ -65,13 +65,13 @@
             <option value="bills">Bills</option>
           </select>
           <input
-            type="text"
+            type="number"
             id="expenseAmount"
             class="expense-amount"
             placeholder="Amount"
             name="expenseAmount"
           />
-          <button id="expense-submit">Submit</button>
+          <button id="expense-submit" onclick="budgetSubtract(event)">Submit</button>
         </form>
       </div>
     </div>
