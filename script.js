@@ -1,4 +1,4 @@
-var startingBudget = prompt("Please enter your starting budget.", "0.00");
+//var startingBudget = prompt("Please enter your starting budget.", "0.00");
 
 document.getElementById("remainingBudget").innerHTML = startingBudget
 document.getElementById("startingBudget").innerHTML = startingBudget;
@@ -47,6 +47,7 @@ function overdraft() {
   if(remainingBudgetAmount <= 0) {
     alert("Cannot purchase additional items.");
     document.getElementById('expense-submit').setAttribute("disabled", true);
+    // remainingBudget.classList.add("over"); -Is this right?SS
   }
 }
 

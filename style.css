@@ -31,6 +31,10 @@ input, select, button {
   color: #3eb488;
 }
 
+@media only screen and (max-width: 678px) {
+
+}
+
 /* color pallette hex codes
     color: #ff4040;
     color: #ff7f51;
