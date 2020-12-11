@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,31 +16,32 @@
 
     <div class="left">
       <div class="budget-total">
-        <div class="budget">
-          Starting Budget $<span id="startingBudget">0.00</span>
+        <div class="start">
+          Starting Budget
+          <br />$<span id="startingBudget">0.00</span>
         </div>
-        <div class="budget">
-          Remaining Budget $<span id="remainingBudget">0.00</span>
+        <div class="remaining">
+          Remaining Budget
+          <br />$<span id="remainingBudget">0.00</span>
+        </div>
+        <div class="totalexp">
+          Total Expenses
+          <br />$<span id="totalcash">0.00</span>
         </div>
       </div>
 
-      <div class="total-expenses">
-        <div id="totalexp">
-          Total Expenses $<span id="totalcash">0.00</span>
+      <div class="total-by-category">
+        <div id="entexp">
+          <i class="fas fa-gamepad"></i>$<span id="entcash">0.00</span>
         </div>
-        <div class="total-by-category">
-          <div id="entexp">
-            <i class="fas fa-gamepad"></i>$<span id="entcash">0.00</span>
-          </div>
-          <div id="foodexp">
-            <i class="fas fa-pizza-slice"></i>$<span id="foodcash">0.00</span>
-          </div>
-          <div id="clothexp">
-            <i class="fas fa-tshirt"></i>$<span id="clothcash">0.00</span>
-          </div>
-          <div id="billexp">
-            <i class="fas fa-envelope"></i>$<span id="billcash">0.00</span>
-          </div>
+        <div id="foodexp">
+          <i class="fas fa-pizza-slice"></i>$<span id="foodcash">0.00</span>
+        </div>
+        <div id="clothexp">
+          <i class="fas fa-tshirt"></i>$<span id="clothcash">0.00</span>
+        </div>
+        <div id="billexp">
+          <i class="fas fa-envelope"></i>$<span id="billcash">0.00</span>
         </div>
       </div>
 
@@ -78,20 +78,19 @@
     </div>
 
     <div class="right">
-    <section class="expense-table" id="expenseContainer">
-      <table class="table">
+      <section class="expense-table" id="expenseContainer">
+        <table class="table">
           <thead>
-              <tr>
-                  <th>Detail</th>
-                  <th>Category</th>
-                  <th>Amount</th>
-              </tr>
+            <tr>
+              <th>Detail</th>
+              <th>Category</th>
+              <th>Amount</th>
+            </tr>
           </thead>
-          <tbody id="expenseTable">
-          </tbody>
-      </table>
-  </section>
-</div>
+          <tbody id="expenseTable"></tbody>
+        </table>
+      </section>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>

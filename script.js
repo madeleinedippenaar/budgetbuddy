@@ -1,7 +1,11 @@
 //var startingBudget = prompt("Please enter your starting budget.", "0.00");
 
-document.getElementById("remainingBudget").innerHTML = startingBudget
-document.getElementById("startingBudget").innerHTML = startingBudget;
+// document.getElementById("remainingBudget").innerHTML = startingBudget
+// document.getElementById("startingBudget").innerHTML = startingBudget;
+
+document.getElementById("remainingBudget").innerHTML = 500;
+document.getElementById("startingBudget").innerHTML = 100;
+
 
 function budgetSubtract(expenseAmount) {
   let remainingBudget = document.getElementById("remainingBudget");
