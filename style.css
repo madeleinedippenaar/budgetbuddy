@@ -5,7 +5,7 @@ body {
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  background-color: #f6ffcf;
+  background-color: #aaf0d2;
   margin: 0px;
   color: #333333;
 }
@@ -14,12 +14,83 @@ header {
   background-color: #3eb488;
   padding: 10px;
   border-radius: 0px 0px 10px 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 570;
 }
 
-input, select, button {
+.budget-total {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  height: 120px;
+  width: auto;
+  margin: 4px 5px 5px 5px;
+  padding: 5px;
+}
+
+.start,
+.remaining,
+.totalexp {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 520;
+}
+
+.total-by-category {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: white;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0.5px 5px 0.5px 5px;
+  padding: 5px;
+  font-size: 30px;
+}
+
+/* span {
+  font-size: 35px;
+} */
+
+.fas{
+  padding: 8px;
+}
+
+.fa-gamepad{
+  color: #ff4040
+}
+
+.fa-pizza-slice{
+  color: #ff7f51;
+}
+
+.fa-tshirt{
+  color: #ffdd0e;
+}
+
+.fa-envelope{
+  color: #70dab4;
+}
+
+input,
+select,
+button {
   border: none;
   border-radius: 10px;
   background-color: white;
+  height: 30px;
+  align-items: center;
+  text-align: center;
+  width: auto;
 }
 
 .over {
@@ -31,15 +102,39 @@ input, select, button {
   color: #3eb488;
 }
 
-@media only screen and (max-width: 678px) {
+.new-expense {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
 
+button{
+  width: 95%;
+  padding: 10px;
+  margin: 10px;
+  background-color: #3eb488;
+}
+
+button:hover{
+    background-color: #ff7f51;
+}
+
+.right {
+  background-color: white;
+  width: 90%;
+  border-radius: 10px;
+  flex: 1.5;
+}
+
+@media only screen and (max-width: 678px) {
 }
 
 /* color pallette hex codes
-    color: #ff4040;
+    color: #ff4040; RED
     color: #ff7f51;
     color: #f6ffcf;
     color: #aaf0d2;
     color: #70dab4;
-    color: #3eb488;
+    color: #3eb488; GREEN
 } */
