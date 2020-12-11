@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,20 +27,20 @@
 
       <div class="total-expenses">
         <div id="totalexp">
-          Total Expenses <span id="totalcash">$0.00</span>
+          Total Expenses $<span id="totalcash">0.00</span>
         </div>
         <div class="total-by-category">
           <div id="entexp">
-            <i class="fas fa-gamepad"></i><span id="entcash">$0.00</span>
+            <i class="fas fa-gamepad"></i>$<span id="entcash">0.00</span>
           </div>
           <div id="foodexp">
-            <i class="fas fa-pizza-slice"></i><span id="foodcash">$0.00</span>
+            <i class="fas fa-pizza-slice"></i>$<span id="foodcash">0.00</span>
           </div>
           <div id="clothexp">
-            <i class="fas fa-tshirt"></i><span id="clothcash">$0.00</span>
+            <i class="fas fa-tshirt"></i>$<span id="clothcash">0.00</span>
           </div>
           <div id="billexp">
-            <i class="fas fa-envelope"></i><span id="billcash">$0.00</span>
+            <i class="fas fa-envelope"></i>$<span id="billcash">0.00</span>
           </div>
         </div>
       </div>
@@ -71,14 +72,26 @@
             placeholder="Amount"
             name="expenseAmount"
           />
-          <button id="expense-submit" onclick="budgetSubtract(event)">Submit</button>
+          <button id="expense-submit">Submit</button>
         </form>
       </div>
     </div>
 
     <div class="right">
-      <div class="expense-table" id="expenseContainer"></div>
-    </div>
-    <script src="script.js"></script>
+    <section class="expense-table" id="expenseContainer">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Detail</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+              </tr>
+          </thead>
+          <tbody id="expenseTable">
+          </tbody>
+      </table>
+  </section>
+</div>
   </body>
+  <script src="script.js"></script>
 </html>
