@@ -47,9 +47,6 @@ header {
   display: grid;
   grid-template-columns: 50% 50%;
   background-color: white;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
   text-align: center;
   border-radius: 10px;
   margin: 0.5px 5px 0.5px 5px;
@@ -61,23 +58,23 @@ header {
   font-size: 35px;
 } */
 
-.fas{
+.fas {
   padding: 8px;
 }
 
-.fa-gamepad{
-  color: #ff4040
+.fa-gamepad {
+  color: #ff4040;
 }
 
-.fa-pizza-slice{
+.fa-pizza-slice {
   color: #ff7f51;
 }
 
-.fa-tshirt{
+.fa-tshirt {
   color: #ffdd0e;
 }
 
-.fa-envelope{
+.fa-envelope {
   color: #70dab4;
 }
 
@@ -88,7 +85,6 @@ button {
   border-radius: 10px;
   background-color: white;
   height: 30px;
-  align-items: center;
   text-align: center;
   width: auto;
 }
