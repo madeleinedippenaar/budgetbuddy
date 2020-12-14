@@ -51,7 +51,7 @@ function logExpense(expenseObj) {
   newDataRow.appendChild(categoryCell);
 
   const amountCell = document.createElement("td");
-  amountCell.textContent = "$" + expenseObj.amount;
+  amountCell.textContent = "$" + parseFloat(expenseObj.amount).toFixed(2);
   newDataRow.appendChild(amountCell);
 
   document.getElementById("expenseTable").appendChild(newDataRow);
