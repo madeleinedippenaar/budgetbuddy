@@ -59,10 +59,10 @@ function logExpense(expenseObj) {
 
 function overdraft() {
   let remainingBudget = document.getElementById("remainingBudget");
-  let remainingBudgetAmount = parseInt(remainingBudget.innerHTML);
+  let remainingBudgetAmount = parseFloat(remainingBudget.innerHTML);
   let remainingDollars = document.getElementById("remainingDollars");
 
-  if (remainingBudgetAmount <= 0) {
+  if (remainingBudgetAmount <= 0.001) {
     alert("Cannot purchase additional items.");
     document.getElementById("expense-submit").setAttribute("disabled", true);
     remainingDollars.classList.add("over");
