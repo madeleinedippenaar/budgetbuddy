@@ -98,29 +98,29 @@ button {
   color: #3eb488;
 }
 
-.new-expense {
+#expenseForm {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   margin: 10px;
 }
 
-button{
+button {
   width: 95%;
   padding: 10px;
   margin: 10px;
   background-color: #3eb488;
 }
 
-button:hover{
-    background-color: #ff7f51;
+button:hover {
+  background-color: #ff7f51;
 }
 
 .right {
   background-color: white;
   width: 90%;
   border-radius: 10px;
-  flex: 1.5;
 }
 
 @media only screen and (max-width: 678px) {
