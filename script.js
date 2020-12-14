@@ -1,72 +1,77 @@
-//var startingBudget = prompt("Please enter your starting budget.", "0.00");
+var startingBudget = 0.0;
 
-// document.getElementById("remainingBudget").innerHTML = startingBudget
-// document.getElementById("startingBudget").innerHTML = startingBudget;
+startingBudget = prompt("Please enter your starting budget.", "0.00");
 
-document.getElementById("remainingBudget").innerHTML = 500;
-document.getElementById("startingBudget").innerHTML = 100;
+startingBudget = parseFloat(startingBudget).toFixed(2).toString();
 
+document.getElementById("remainingBudget").innerHTML = startingBudget;
+document.getElementById("startingBudget").innerHTML = startingBudget;
 
 function budgetSubtract(expenseAmount) {
   let remainingBudget = document.getElementById("remainingBudget");
-  let updatedTotal = parseFloat(remainingBudget.innerHTML) - expenseAmount;
-  remainingBudget.innerHTML = updatedTotal;
+  let totalAmount = parseFloat(remainingBudget.innerHTML) - expenseAmount;
+  remainingBudget.innerHTML = parseFloat(totalAmount).toFixed(2);
 }
 
 function totalExpenses(expenseAmount) {
-  let totalcash =  document.getElementById("totalcash");
+  let totalcash = document.getElementById("totalcash");
   let totalAmount = parseFloat(totalcash.innerHTML) + expenseAmount;
-  totalcash.innerHTML = totalAmount;
+  totalcash.innerHTML = parseFloat(totalAmount).toFixed(2);
 }
 
 function addToCategory(category, amount) {
-  let entcash = document.getElementById("entcash").innerHTML;
-  let foodcash = document.getElementById("foodcash").innerHTML;
-  let clothcash = document.getElementById("clothcash").innerHTML;
-  let billcash = document.getElementById("billcash").innerHTML;
-
-  entcash = parseFloat(entcash);
-  foodcash = parseFloat(foodcash);
-  clothcash = parseFloat(clothcash);
-  billcash = parseFloat(billcash);
-
-  if(category === 'entertainment') {
-    let newent = entcash + amount;
-    document.getElementById("entcash").innerHTML = newent;
-  } else if (category === 'food') {
-    let newfood = foodcash + amount;
-    document.getElementById("foodcash").innerHTML = newfood;
-  } else if (category === 'clothing') {
-    let newcloth = clothcash + amount;
-    document.getElementById("clothcash").innerHTML = newcloth;
-  } else if (category === 'bills') {
-    let newbill = billcash + amount;
-    document.getElementById("billcash").innerHTML = newbill;
+  if (category === "entertainment") {
+    let entcash = document.getElementById("entcash");
+    let newent = parseFloat(entcash.innerHTML) + amount;
+    entcash.innerHTML = parseFloat(newent).toFixed(2);
+  } else if (category === "food") {
+    let foodcash = document.getElementById("foodcash");
+    let newfood = parseFloat(foodcash.innerHTML) + amount;
+    foodcash.innerHTML = parseFloat(newfood).toFixed(2);
+  } else if (category === "clothing") {
+    let clothcash = document.getElementById("clothcash");
+    let newcloth = parseFloat(clothcash.innerHTML) + amount;
+    clothcash.innerHTML = parseFloat(newcloth).toFixed(2);
+  } else if (category === "bills") {
+    let billcash = document.getElementById("billcash");
+    let newbill = parseFloat(billcash.innerHTML) + amount;
+    billcash.innerHTML = parseFloat(newbill).toFixed(2);
   }
+}
+
+function logExpense(expenseObj) {
+  const newDataRow = document.createElement("tr");
+
+  const descriptionCell = document.createElement("td");
+  descriptionCell.textContent = expenseObj.description;
+  newDataRow.appendChild(descriptionCell);
+
+  const categoryCell = document.createElement("td");
+  categoryCell.textContent = expenseObj.category;
+  newDataRow.appendChild(categoryCell);
+
+  const amountCell = document.createElement("td");
+  amountCell.textContent = "$" + expenseObj.amount;
+  newDataRow.appendChild(amountCell);
+
+  document.getElementById("expenseTable").appendChild(newDataRow);
 }
 
 function overdraft() {
   let remainingBudget = document.getElementById("remainingBudget");
   let remainingBudgetAmount = parseInt(remainingBudget.innerHTML);
-  if(remainingBudgetAmount <= 0) {
-    alert("Cannot purchase additional items.");
-    document.getElementById('expense-submit').setAttribute("disabled", true);
-    // remainingBudget.classList.add("over"); -Is this right?SS
-  }
-}
+  let remainingDollars = document.getElementById("remainingDollars");
 
-function logExpense(expenseObj){
-  const newDataRow = document.createElement("tr");
-  const descriptionCell = document.createElement("td");
-  descriptionCell.textContent = expenseObj.description;
-  newDataRow.appendChild(descriptionCell);
-  const categoryCell = document.createElement("td");
-  categoryCell.textContent = expenseObj.category;
-  newDataRow.appendChild(categoryCell);
-  const amountCell = document.createElement('td');
-  amountCell.textContent = "$" + expenseObj.amount;
-  newDataRow.appendChild(amountCell);
-  document.getElementById("expenseTable").appendChild(newDataRow);
+  if (remainingBudgetAmount <= 0) {
+    alert("Cannot purchase additional items.");
+    document.getElementById("expense-submit").setAttribute("disabled", true);
+    remainingDollars.classList.add("over");
+    remainingDollars.innerText = "-$" + remainingBudget.innerHTML.slice(1);
+  }
+
+  if (remainingBudgetAmount == 0.0) {
+    remainingDollars.innerText = "$0.00";
+  }
 }
 
 const expenseForm = document.getElementById("expenseForm");
@@ -93,4 +98,4 @@ expenseForm.addEventListener("submit", (e) => {
   logExpense(expenseObj);
 
   overdraft();
-})
+});
