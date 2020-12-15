@@ -19,7 +19,11 @@ header {
   align-items: center;
   font-size: 22px;
   font-weight: 570;
+  justify-content: space-between;
+  padding-bottom: 45px;
 }
+
+
 
 .budget-total {
   display: flex;
@@ -29,7 +33,7 @@ header {
   text-align: center;
   border-radius: 10px;
   height: 120px;
-  margin: 4px 5px 5px 5px;
+  margin: -35px 5px 5px 5px;
   padding: 5px;
 }
 
@@ -116,8 +120,20 @@ button:hover {
 
 .right {
   background-color: white;
-  width: 90%;
   border-radius: 10px;
+  padding: 5px;
+  margin: 4px 5px 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table, section {
+  width: 100%;
+}
+
+td {
+  text-align: center;
 }
 
 @media only screen and (max-width: 678px) {
