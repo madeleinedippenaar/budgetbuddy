@@ -25,12 +25,10 @@ header {
   display: flex;
   background-color: white;
   align-items: center;
-  align-self: center;
   justify-content: center;
   text-align: center;
   border-radius: 10px;
   height: 120px;
-  width: auto;
   margin: 4px 5px 5px 5px;
   padding: 5px;
 }
@@ -47,9 +45,6 @@ header {
   display: grid;
   grid-template-columns: 50% 50%;
   background-color: white;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
   text-align: center;
   border-radius: 10px;
   margin: 0.5px 5px 0.5px 5px;
@@ -61,23 +56,23 @@ header {
   font-size: 35px;
 } */
 
-.fas{
+.fas {
   padding: 8px;
 }
 
-.fa-gamepad{
-  color: #ff4040
+.fa-gamepad {
+  color: #ff4040;
 }
 
-.fa-pizza-slice{
+.fa-pizza-slice {
   color: #ff7f51;
 }
 
-.fa-tshirt{
+.fa-tshirt {
   color: #ffdd0e;
 }
 
-.fa-envelope{
+.fa-envelope {
   color: #70dab4;
 }
 
@@ -88,9 +83,11 @@ button {
   border-radius: 10px;
   background-color: white;
   height: 30px;
-  align-items: center;
   text-align: center;
-  width: auto;
+}
+
+.remaining-dollars {
+  color: #3eb488;
 }
 
 .over {
@@ -98,33 +95,29 @@ button {
   font-weight: bolder;
 }
 
-.under {
-  color: #3eb488;
-}
-
-.new-expense {
+#expenseForm {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   margin: 10px;
 }
 
-button{
+button {
   width: 95%;
   padding: 10px;
   margin: 10px;
   background-color: #3eb488;
 }
 
-button:hover{
-    background-color: #ff7f51;
+button:hover {
+  background-color: #ff7f51;
 }
 
 .right {
   background-color: white;
   width: 90%;
   border-radius: 10px;
-  flex: 1.5;
 }
 
 @media only screen and (max-width: 678px) {

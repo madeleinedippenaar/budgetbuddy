@@ -28,11 +28,14 @@
         </div>
         <div class="remaining">
           Remaining Budget
-          <br />$<span id="remainingBudget">0.00</span>
+          <span id="remainingDollars" class="remaining-dollars"
+            ><br />$<span id="remainingBudget">0.00</span></span
+          >
         </div>
         <div class="totalexp">
-          Total Expenses
-          <br />$<span id="totalcash">0.00</span>
+          <div id="totalexp">
+            Total Expenses <br />$<span id="totalcash">0.00</span>
+          </div>
         </div>
       </div>
 
@@ -59,13 +62,16 @@
             class="expense-description"
             placeholder="Expense Description"
             name="expenseDescription"
+            required
           />
           <select
             name="expense-type"
             id="expenseType"
             class="expense-type"
             name="expenseType"
+            required
           >
+            <option value="" disabled selected>Select category...</option>
             <option value="entertainment">Entertainment</option>
             <option value="food">Food</option>
             <option value="clothing">Clothing</option>
@@ -73,10 +79,12 @@
           </select>
           <input
             type="number"
+            step="0.01"
             id="expenseAmount"
             class="expense-amount"
             placeholder="Amount"
             name="expenseAmount"
+            required
           />
           <button id="expense-submit">Submit</button>
         </form>
