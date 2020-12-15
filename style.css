@@ -133,6 +133,10 @@ button:hover {
   width: 100%;
 }
 
+th {
+  text-decoration: underline;
+}
+
 td {
   text-align: center;
 }
